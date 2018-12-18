@@ -1,0 +1,120 @@
+ANTES DE GERAR O REPOSITORIO, CONFIGURAR A CHAVE RSA
+
+
+1) Subir os arquivos para o repositorio no GIT
+
+2) Abrir o prompt do GIT
+
+3) Ir até a pasta do repositorio
+
+4) Fazer um GIT clone
+
+
+gabrielacruz@CIT021682 MINGW64 /c/Selenium/JNJMD (janrainv1)
+$ git clone https://github.com/gocruz/janrain
+
+Cloning into 'janrain'...
+remote: Enumerating objects: 11, done.
+remote: Counting objects: 100% (11/11), done.
+remote: Compressing objects: 100% (10/10), done.
+remote: Total 11 (delta 0), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (11/11), done.
+
+
+5) Fazer o primeiro push
+
+gabrielacruz@CIT021682 MINGW64 /c/Selenium/JNJMD (janrainv1)
+$ git push --set-upstream origin janrainv1
+
+Enumerating objects: 18, done.
+Counting objects: 100% (18/18), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (12/12), done.
+Writing objects: 100% (18/18), 4.02 KiB | 128.00 KiB/s, done.
+Total 18 (delta 0), reused 0 (delta 0)
+remote:
+remote: Create a pull request for 'janrainv1' on GitHub by visiting:
+remote:      https://github.com/gocruz/janrain/pull/new/janrainv1
+remote:
+To https://github.com/gocruz/janrain.git
+ * [new branch]      janrainv1 -> janrainv1
+Branch 'janrainv1' set up to track remote branch 'janrainv1' from 'origin'.
+
+
+6) Como fazer os demais pushs
+
+gabrielacruz@CIT021682 MINGW64 /c/Selenium/JNJMD (janrainv1)
+$ git push
+Everything up-to-date
+
+
+
+
+
+COMO CONFIGURAR O REPOSITORIO NOVO(se preciso)
+
+gabrielacruz@CIT021682 MINGW64 /c/Selenium/JNJMD (janrainv1)
+$ echo "# janrain" >> README.md
+
+gabrielacruz@CIT021682 MINGW64 /c/Selenium/JNJMD (janrainv1)
+$ git init
+Reinitialized existing Git repository in C:/Selenium/JNJMD/.git/
+
+gabrielacruz@CIT021682 MINGW64 /c/Selenium/JNJMD (janrainv1)
+$ git add README.md
+warning: LF will be replaced by CRLF in README.md.
+The file will have its original line endings in your working directory
+
+gabrielacruz@CIT021682 MINGW64 /c/Selenium/JNJMD (janrainv1)
+$ git commit -m "first commit"
+[janrainv1 (root-commit) 478d625] first commit
+ 9 files changed, 132 insertions(+)
+ create mode 100644 .classpath
+ create mode 100644 .project
+ create mode 100644 .settings/org.eclipse.jdt.core.prefs
+ create mode 100644 README.md
+ create mode 100644 bin/SIGNIN/SignIn.class
+ create mode 100644 pom.xml
+ create mode 100644 src/SIGNIN/SignIn.java
+ create mode 100644 target/MySel20Proj-1.0.jar
+ create mode 100644 target/maven-archiver/pom.properties
+
+
+https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/
+
+~GENERATING A NEW SSH KEY~
+
+
+1) Open Git Bash.
+
+2) Paste the text below, substituting in your GitHub email address.
+
+ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
+
+This creates a new ssh key, using the provided email as a label.
+
+3) Generating public/private rsa key pair.
+When you're prompted to "Enter a file in which to save the key," press Enter. This accepts the default file location.
+
+4) Enter a file in which to save the key (/c/Users/you/.ssh/id_rsa):[Press enter]
+At the prompt, type a secure passphrase. For more information, see "Working with SSH key passphrases".
+Enter passphrase (empty for no passphrase): [Type a passphrase]
+Enter same passphrase again: [Type passphrase again]
+
+5) Adding your SSH key to the ssh-agent
+Before adding a new SSH key to the ssh-agent to manage your keys, you should have checked for existing SSH keys and generated a new SSH key.
+If you have GitHub Desktop installed, you can use it to clone repositories and not deal with SSH keys. It also comes with the Git Bash tool, which is the preferred way of running git commands on Windows.
+
+Ensure the ssh-agent is running:
+
+If you are using the Git Shell that's installed with GitHub Desktop, the ssh-agent should be running.
+If you are using another terminal prompt, such as Git for Windows, you can use the "Auto-launching the ssh-agent" instructions in "Working with SSH key passphrases", or start it manually:
+# start the ssh-agent in the background
+eval $(ssh-agent -s)
+Agent pid 59566
+Add your SSH private key to the ssh-agent. If you created your key with a different name, or if you are adding an existing key that has a different name, replace id_rsa in the command with the name of your private key file.
+
+ssh-add ~/.ssh/id_rsa
+
+
+6)Add the SSH key to your GitHub account.
