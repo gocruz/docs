@@ -1,5 +1,7 @@
-ANTES DE GERAR O REPOSITORIO, CONFIGURAR A CHAVE RSA
+~~ANTES DE GERAR O REPOSITORIO, CONFIGURAR A CHAVE RSA
 
+
+COMO FAZER CLONE E PUSH
 
 1) Subir os arquivos para o repositorio no GIT
 
@@ -7,7 +9,7 @@ ANTES DE GERAR O REPOSITORIO, CONFIGURAR A CHAVE RSA
 
 3) Ir até a pasta do repositorio
 
-4) Fazer um GIT clone
+4) Fazer um GIT clone(verificar o diretorio em que o clone foi salvo)
 
 
 gabrielacruz@CIT021682 MINGW64 /c/Selenium/JNJMD (janrainv1)
@@ -24,7 +26,7 @@ Unpacking objects: 100% (11/11), done.
 5) Fazer o primeiro push
 
 gabrielacruz@CIT021682 MINGW64 /c/Selenium/JNJMD (janrainv1)
-$ git push --set-upstream origin janrainv1
+$ git push --set-upstream origin
 
 Enumerating objects: 18, done.
 Counting objects: 100% (18/18), done.
@@ -44,8 +46,15 @@ Branch 'janrainv1' set up to track remote branch 'janrainv1' from 'origin'.
 6) Como fazer os demais pushs
 
 gabrielacruz@CIT021682 MINGW64 /c/Selenium/JNJMD (janrainv1)
-$ git push
+$ git push origin master
 Everything up-to-date
+
+
+7) Se quiser renomear seu local
+Seu local se chama origin por padrão, se quiser renomear por ex para docs1:
+
+gabrielacruz@CIT021682 MINGW64 /c/Selenium/docs (master)
+$ git remote add docs1 https://github.com/gocruz/docs
 
 
 
