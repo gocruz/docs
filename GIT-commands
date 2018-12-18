@@ -45,9 +45,46 @@ Branch 'janrainv1' set up to track remote branch 'janrainv1' from 'origin'.
 
 6) Como fazer os demais pushs
 
-gabrielacruz@CIT021682 MINGW64 /c/Selenium/JNJMD (janrainv1)
-$ git push origin master
-Everything up-to-date
+i)Adicionar os arquivos que vc alterou para sua branch
+
+gabrielacruz@CIT021682 MINGW64 /c/Selenium/docs (master)
+$ git add GIT-commands
+
+ii)Verificar arquivos adicionados para commit
+
+gabrielacruz@CIT021682 MINGW64 /c/Selenium/docs (master)
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        modified:   GIT-commands
+
+iii) Fazer commit, não esquecer de adicionar uma msg
+
+gabrielacruz@CIT021682 MINGW64 /c/Selenium/docs (master)
+$ git commit -m "teste1"
+[master 4310765] teste1
+ 1 file changed, 13 insertions(+), 4 deletions(-)
+
+iv) Fazer push
+
+gabrielacruz@CIT021682 MINGW64 /c/Selenium/docs (master)
+$ git push docs1 master
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 504 bytes | 168.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/gocruz/docs
+   4cb7995..4310765  master -> master
+
+gabrielacruz@CIT021682 MINGW64 /c/Selenium/docs (master)
+
 
 
 7) Se quiser renomear seu local
@@ -58,7 +95,7 @@ $ git remote add docs1 https://github.com/gocruz/docs
 
 
 
-
+-------------------------------------------------------
 
 COMO CONFIGURAR O REPOSITORIO NOVO(se preciso)
 
@@ -89,9 +126,10 @@ $ git commit -m "first commit"
  create mode 100644 target/maven-archiver/pom.properties
 
 
-https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/
+
 
 ~GENERATING A NEW SSH KEY~
+https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/
 
 
 1) Open Git Bash.
